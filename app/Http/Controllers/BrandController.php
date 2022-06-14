@@ -38,7 +38,7 @@ class BrandController
 
         return view('guest.brands.list', [
             'title' => 'Danh sách thương hiệu sản phẩm',
-            'brands' => $data['brands'],
+            'brands' => !empty($data['brands']) ? $data['brands'] : [],
             'categories' => $this->category->get(1)
         ]);
     }

@@ -14,17 +14,19 @@
                                 <svg class="svg-chevron-down"></svg>
                             </span>
                 </a>
-                <div class="navmenu-submenu" data-navmenu-submenu="">
-                    <div class="navmenu-meganav--scroller">
-                        <ul class="navmenu navmenu-depth-2">
-                            @foreach($menu as $cate)
-                                @if($cate->parent_id === 0)
-                                    <li><a class="navmenu-link" href="{{route('danhmuc.chitiet',$cate->slug)}}">{{$cate->name}}</a></li>
-                                @endif
-                            @endforeach
-                        </ul>
+                @if(isset($menu) && !empty($menu))
+                    <div class="navmenu-submenu" data-navmenu-submenu="">
+                        <div class="navmenu-meganav--scroller">
+                            <ul class="navmenu navmenu-depth-2">
+                                @foreach($menu as $cate)
+                                    @if($cate->parent_id === 0)
+                                        <li><a class="navmenu-link" href="{{route('danhmuc.chitiet',$cate->slug)}}">{{$cate->name}}</a></li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                @endif
             </li>
             <li class="navmenu-item">
                 <a class="navmenu-link" href="{{route('hang.index')}}">Thương hiệu</a>
@@ -77,6 +79,7 @@
                                     <svg class="svg-chevron-down"></svg>
                                 </span>
                     </a>
+                    @if(isset($menu) && !empty($menu))
                     <div class="navmenu-submenu navmenu-meganav" data-navmenu-submenu="" data-meganav-menu="">
                         <div class="navmenu-meganav--scroller">
                             <ul class="navmenu navmenu-depth-2">
@@ -88,6 +91,7 @@
                             </ul>
                         </div>
                     </div>
+                    @endif
                 </li>
                 <li class="navmenu-item">
                     <a class="navmenu-link" href="{{route('hang.index')}}">Thương hiệu</a>
