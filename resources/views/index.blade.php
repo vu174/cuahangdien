@@ -90,7 +90,7 @@
                         <div class="slider-wrap" style="">
                             @php $bannerSort0 = \App\Helpers\Helper::bannerWithSort($banners, 0); @endphp
                             <a class="impress-banner" href="{{$bannerSort0->url ?? '#'}}" data-banner-title="">
-                                <img src="{{isset($bannerSort0->image) ? asset($bannerSort0->image) : asset('storage/default/banners/vt1.jpg')}}"
+                                <img src="{{isset($bannerSort0->image) ? asset($bannerSort0->image) : asset('default/banners/vt1.jpg')}}"
                                      alt="{{$bannerSort0->alt ?? ''}}" class="insdr-insight-1-1">
                             </a>
                         </div>
@@ -100,7 +100,7 @@
                                 <a class="impress-banner" data-banner-group-code="home_v4_sub_banner"
                                    href="{{$bannerSort6->url ?? '#'}}">
 
-                                    <img src="{{isset($bannerSort6->image) ? asset($bannerSort6->image) : asset('storage/default/banners/vt7.jpg')}}"
+                                    <img src="{{isset($bannerSort6->image) ? asset($bannerSort6->image) : asset('default/banners/vt7.jpg')}}"
                                          alt="{{$bannerSort6->alt ?? ''}}">
                                 </a>
                             </div>
@@ -109,7 +109,7 @@
                                 <a class="impress-banner" data-banner-group-code="home_v4_sub_banner"
                                    href="{{$bannerSort5->url ?? '#'}}">
 
-                                    <img src="{{isset($bannerSort5->image) ? asset($bannerSort5->image) : asset('storage/default/banners/vt6.jpg')}}"
+                                    <img src="{{isset($bannerSort5->image) ? asset($bannerSort5->image) : asset('default/banners/vt6.jpg')}}"
                                          alt="{{$bannerSort5->alt ?? ''}}">
                                 </a>
                             </div>
@@ -122,7 +122,7 @@
                             <a class="impress-banner" data-banner-group-code="home_v4_sub_banner"
                                href="{{$bannerSort1->url ?? '#'}}">
 
-                                <img src="{{isset($bannerSort1->image) ? asset($bannerSort1->image) : asset('storage/default/banners/vt2.jpg')}}"
+                                <img src="{{isset($bannerSort1->image) ? asset($bannerSort1->image) : asset('default/banners/vt2.jpg')}}"
                                      alt="{{$bannerSort1->alt ?? ''}}">
                             </a>
                         </div>
@@ -131,21 +131,21 @@
                             <a class="impress-banner" data-banner-group-code="home_v4_sub_banner"
                                href="{{$bannerSort2->url ?? '#'}}">
 
-                                <img src="{{isset($bannerSort2->image) ? asset($bannerSort2->image) : asset('storage/default/banners/vt3.jpg')}}"
+                                <img src="{{isset($bannerSort2->image) ? asset($bannerSort2->image) : asset('default/banners/vt3.jpg')}}"
                                      alt="{{$bannerSort2->alt ?? ''}}">
                             </a>
                         </div>
                         <div class="mini-item">
                             @php $bannerSort4 = \App\Helpers\Helper::bannerWithSort($banners, 4); @endphp
                             <a class="impress-banner" href="{{$bannerSort4->url ?? '#'}}">
-                                <img src="{{isset($bannerSort4->image) ? asset($bannerSort4->image) : asset('storage/default/banners/vt5.jpg')}}"
+                                <img src="{{isset($bannerSort4->image) ? asset($bannerSort4->image) : asset('default/banners/vt5.jpg')}}"
                                      alt="{{$bannerSort4->alt ?? ''}}">
                             </a>
                         </div>
                         <div class="mini-item">
                             @php $bannerSort3 = \App\Helpers\Helper::bannerWithSort($banners, 3); @endphp
                             <a class="impress-banner" href="{{$bannerSort3->url ?? '#'}}">
-                                <img src="{{isset($bannerSort3->image) ? asset($bannerSort3->image) : asset('storage/default/banners/vt4.jpg')}}"
+                                <img src="{{isset($bannerSort3->image) ? asset($bannerSort3->image) : asset('default/banners/vt4.jpg')}}"
                                      alt="{{$bannerSort3->alt ?? ''}}">
                             </a>
                         </div>
@@ -193,7 +193,7 @@
                         data-rimg="lazy" data-rimg-template=""
                         data-themecolor="#4d4d4d"
                         data-slidecolor="#ffffff"
-                        style="background-image: url('{{asset('/storage/default/banners/vt1.jpg')}}');">
+                        style="background-image: url('{{asset('default/banners/vt1.jpg')}}');">
                         <div data-rimg-canvas></div>
                         <div class="slideshow-slide-overlay slideshow-slide-overlay--static-slideshow-1"></div>
                     </div>

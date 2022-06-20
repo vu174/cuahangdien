@@ -32,7 +32,7 @@
                                         </p>
                                         <h3 style="font-size: 13px; margin: 20px 0 0 0; border-bottom: 1px solid #ddd; text-transform: uppercase; color: #f8ad0d;">
                                             THÔNG TIN ĐƠN HÀNG #{{$order->code}}
-                                            <span style="font-size:12px;color:#777;text-transform:none;font-weight:normal">(Ngày {{\App\Helpers\Helper::getDateTime($order->created_at)}} {{date('g:i A',strtotime($order->created_at))}}</span>
+                                            <span style="font-size:12px;color:#777;text-transform:none;font-weight:normal">(Ngày {{\App\Helpers\Helper::getDateTime($order->created_at)}} {{date('g:i A',strtotime($order->created_at))}})</span>
                                         </h3>
                                     </td>
                                 </tr>
@@ -193,11 +193,17 @@
                                         <td>
                                             <p style="border-top: 1px solid #979797;"></p>
                                             <p style="font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; padding: 0; margin: 0 0 10px;color: #5e5e5e; text-align: center; line-height: 14px; font-size: 11px;">
-                                                <b>{{$info->name ?? "#"}}</b>
-                                                <br />
-                                                <span>Điện thoại:</span> {{$info->hotline1 ?? "#"}} hoặc {{$info->hotline2 ?? "#"}}
-                                                <br />
-                                                <span>Địa chỉ:</span> {{$info->address ?? "#"}}
+                                                @if(!empty($info->name))
+                                                    <b>{{$info->name}}</b>
+                                                    <br />
+                                                @endif
+                                                @if(!empty($info->hotline1))
+                                                    <span>Điện thoại:</span> {{$info->hotline1}} @if(!empty($info->hotline2)) hoặc {{$info->hotline2}}@endif
+                                                    <br />
+                                                @endif
+                                                @if(!empty($info->address))
+                                                    <span>Địa chỉ:</span> {{$info->address}}
+                                                @endif
                                             </p>
                                         </td>
                                     </tr>

@@ -49,7 +49,7 @@ class OrderService
         try {
             $code_name = $request->code_name;
             $status = in_array((int)$request->status, [0,1,2,3,4,5,6,7]) ? (int)$request->status : 0;
-            return Order::where(['code_name' => $code_name])->update(['status' => $status]);
+            return Order::where(['code_name' => $code_name])->first()->update(['status' => $status]);
 
         } catch (\Exception $exception) {
             Session::flash('error', $exception->getMessage());

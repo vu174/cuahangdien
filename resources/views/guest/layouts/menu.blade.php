@@ -14,7 +14,7 @@
                                 <svg class="svg-chevron-down"></svg>
                             </span>
                 </a>
-                @if(isset($menu) && !empty($menu))
+                @if(isset($menu) && !empty($menu->isNotEmpty()))
                     <div class="navmenu-submenu" data-navmenu-submenu="">
                         <div class="navmenu-meganav--scroller">
                             <ul class="navmenu navmenu-depth-2">

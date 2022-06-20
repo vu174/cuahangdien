@@ -5,6 +5,7 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 class OrderMail extends Mailable
 {

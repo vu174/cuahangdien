@@ -96,7 +96,7 @@ class ProductService
             }
 
             if($path_image === null && $path_image_01 === null && $path_image_02 === null) {
-                $path_image = '/storage/default/image-available.jpg';
+                $path_image = '/default/image-available.jpg';
             }
 
             // add product
@@ -189,7 +189,7 @@ class ProductService
                 $path_image = $this->upload->store($request->file('image'));
             }
 
-            if (($path_image_01 !== null || $path_image_02 !== null) && $path_image == '/storage/default/image-available.jpg'){
+            if (($path_image_01 !== null || $path_image_02 !== null) && $path_image == '/default/image-available.jpg'){
                 $path_image = null;
             }
 

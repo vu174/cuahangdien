@@ -134,7 +134,7 @@ class CartService
 
             $product_latest = $this->orderService->getLatest();
 
-            $code = 'DH'.str_pad($product_latest->id + 1, 8, "0", STR_PAD_LEFT);
+            $code = 'DH'.str_pad(($product_latest->id ?? 0) + 1, 8, "0", STR_PAD_LEFT);
 
             $code_name  = substr(str_shuffle("QWERTYUIOPASDFGHJKLZXCVBNM0123456789abcdefghijklmnopqrstuvwxyz"), 0, 8);
 

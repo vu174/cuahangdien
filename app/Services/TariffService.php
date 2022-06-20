@@ -28,7 +28,7 @@ class TariffService
             if ($request->hasFile('image')) {
                 $path_image = $this->upload->store($request->file('image'));
             }else{
-                $path_image = '/storage/default/image-available.jpg';
+                $path_image = '/default/image-available.jpg';
             }
 
             Tariff::create([

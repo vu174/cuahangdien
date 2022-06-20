@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\ShippingController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\TelegramController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TariffController;
@@ -182,6 +183,9 @@ Route::middleware(['auth'])->group(function () {
             Route::post('/orders/status',[OrderController::class,'updateStatus'])->name('order.update');
             #Print
             Route::get('/orders/print/{code_name}',[OrderController::class,'print'])->name('order.print');
+
+            Route::get('/updated-activity',[TelegramController::class, 'updatedActivity']);
+
         });
     });
 });

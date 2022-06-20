@@ -104,10 +104,10 @@ class ProductController extends Controller
             $products = $this->productService->getProductFilterByBrand($array_brands, 40);
         }
 
-        echo '<pre>';
-        var_dump($products);
-        echo '</pre>';
-        die();
+//        echo '<pre>';
+//        var_dump($products);
+//        echo '</pre>';
+//        die();
 
         $brand_with_category = $this->brandService->getBrandsWithCategory();
 
@@ -136,7 +136,7 @@ class ProductController extends Controller
             }
         }
 
-        return view('guest.products.category-sort', [
+        return view('guest.products.category', [
             'title' => $title,
             'data_url' => $url,
             'products' => $products,

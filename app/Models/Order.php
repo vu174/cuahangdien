@@ -2,12 +2,16 @@
 
 namespace App\Models;
 
+use App\Jobs\OrderTelegramJob;
+use App\Jobs\UpdateOrderJob;
+use App\Observers\OrderObserver;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 
 /**
@@ -58,8 +62,21 @@ use Illuminate\Support\Carbon;
 class Order extends Model
 {
     use HasFactory;
+    use Notifiable;
 
     protected $table = 'order';
+//
+//    protected static function boot()
+//    {
+//        parent::boot();
+//
+//        static::created(function ($instance){
+//            OrderTelegramJob::dispatch($instance);
+//        });
+//        static::updated(function ($instance){
+//            UpdateOrderJob::dispatch($instance);
+//        });
+//    }
 
     protected $fillable = [
         'code_name',
