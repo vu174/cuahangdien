@@ -57,7 +57,7 @@
                                     <td>{{number_format($order->total)}} VND</td>
                                     <td>{!! \App\Helpers\Helper::statusBillShowInAdmin($order->status) !!}</td>
                                     <td>
-                                        <a class="btn btn-primary btn-sm btn-show" href="{{route('admin.order.detail',$order->code_name)}}" target="_blank"><i class="fas fa-eye"></i></a>
+                                        <a class="btn btn-primary btn-sm btn-show" href="{{route('admin.order.detail',$order->code_name)}}"><i class="fas fa-eye"></i></a>
                                         <button class="btn btn-info btn-sm btn-update" onclick="updateStatus('{{route('admin.order.show',$order->code_name)}}')" data-toggle="modal" data-target="#status"><i class="fas fa-wrench"></i></button>
                                         <a class="btn btn-secondary btn-sm btn-edit" href="{{route('admin.order.print',$order->code_name)}}" target="_blank"><i class="fas fa-print"></i></a>
                                     </td>
