@@ -58,7 +58,7 @@
                     <!-- /.col -->
                     <div class="col-6">
                         <div class="mt-1 text-right">
-                            <a href="#">{{__('Forgot your password?')}}</a>
+                            <a href="javascript:void(0)">{{__('Forgot your password?')}}</a>
                         </div>
                     </div>
                     <!-- /.col -->

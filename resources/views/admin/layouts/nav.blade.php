@@ -3,7 +3,7 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            <a class="nav-link" data-widget="pushmenu" href="javascript:void(0)" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="{{config('app.url_admin')}}" class="nav-link">Home</a>
@@ -14,7 +14,7 @@
     <ul class="navbar-nav ml-auto">
         <!-- Navbar Search -->
         <li class="nav-item">
-            <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <a class="nav-link" data-widget="navbar-search" href="javascript:void(0)" role="button">
                 <i class="fas fa-search"></i>
             </a>
             <div class="navbar-search-block">
@@ -35,12 +35,12 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <a class="nav-link" data-widget="fullscreen" href="javascript:void(0)" role="button">
                 <i class="fas fa-expand-arrows-alt"></i>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="javascript:void(0)" role="button">
                 <i class="fas fa-th-large"></i>
             </a>
         </li>
@@ -70,7 +70,7 @@
                 <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{Auth::user()->name ?? 'Admin'}}</a>
+                <a href="javascript:void(0)" class="d-block">{{Auth::user()->name ?? 'Admin'}}</a>
             </div>
         </div>
 
@@ -103,7 +103,7 @@
                     <span style="text-transform: uppercase">Cửa hàng</span>
                 </li>
                 <li class="nav-item {{ (request()->is('admin/orders*')) ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ (request()->is('admin/orders*')) ? 'active' : '' }}">
+                    <a href="javascript:void(0)" class="nav-link {{ (request()->is('admin/orders*')) ? 'active' : '' }}">
                         <i class="nav-icon  fas fa-cart-arrow-down "></i>
                         <p>
                             Quản lý đơn hàng
@@ -121,7 +121,7 @@
                     </ul>
                 </li>
                 <li class="nav-item {{ (request()->is('admin/products*')) || (request()->is('admin/categories*')) || (request()->is('admin/brands*')) ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ (request()->is('admin/products*')) || (request()->is('admin/categories*')) ? 'active' : '' }}">
+                    <a href="javascript:void(0)" class="nav-link {{ (request()->is('admin/products*')) || (request()->is('admin/categories*')) ? 'active' : '' }}">
                         <i class="nav-icon  fas fa-folder-open "></i>
                         <p>
                             Sản phẩm & danh mục
@@ -147,7 +147,7 @@
 
                 <!-- Blogs -->
                 <li class="nav-item {{ (request()->is('admin/post_categories*')) || (request()->is('admin/posts*')) ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ (request()->is('admin/blogs*')) ? 'active' : '' }}">
+                    <a href="javascript:void(0)" class="nav-link {{ (request()->is('admin/blogs*')) ? 'active' : '' }}">
                         <i class="nav-icon far fa-file-powerpoint"></i>
                         <p>
                             Bài đăng

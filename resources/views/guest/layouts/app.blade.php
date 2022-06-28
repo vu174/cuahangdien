@@ -44,7 +44,7 @@
              data-site-header-main
              data-site-header-sticky>
         <div class="site-header-menu-toggle">
-            <a class="site-header-menu-toggle--button" href="#" data-menu-toggle>
+            <a class="site-header-menu-toggle--button" href="javascript:void(0)" data-menu-toggle>
                 <span class="toggle-icon--bar toggle-icon--bar-top"></span>
                 <span class="toggle-icon--bar toggle-icon--bar-middle"></span>
                 <span class="toggle-icon--bar toggle-icon--bar-bottom"></span>
