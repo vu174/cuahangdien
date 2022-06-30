@@ -23,10 +23,7 @@ class UpdateOrderJob implements ShouldQueue
 
     public function handle()
     {
-
-        $user = auth()->user()->name;
-
-        $text = 'Bạn có đơn hàng #' . $this->order->code . ' - ['. Helper::getNameStatusBill($this->order->status) .']';
+        $text = 'Admin đã thay đổi trạng thái đơn hàng #' . $this->order->code . ' thành ['. Helper::getNameStatusBill($this->order->status) .']';
 
         Telegram::sendMessage([
             'chat_id' => env('TELEGRAM_CHANNEL_ID', ''),

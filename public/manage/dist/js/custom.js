@@ -59,12 +59,7 @@ $(document).ready(function () {
     $("#login").click(function () {
         const btnLogin = $("#login");
         const btnLoginText = btnLogin.text();
-        const url_previous = $("#url_previous").val();
-        const url_current = window.location.href;
-        let url_redirect = '/admin/dashboard';
-        if (url_previous !== url_current){
-            url_redirect = url_previous;
-        }
+        let url_redirect = $("#url_previous").val();
         btnLogin.attr("disabled", true);
         btnLogin.empty();
         btnLogin.append('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...');
@@ -74,7 +69,7 @@ $(document).ready(function () {
             data: $("#form_login").serialize(),
             dataType: 'json',
             success: function (data) {
-                toastr.success(data.message)
+                toastr.success(data.message);
                 setTimeout(function () {
                     window.location.href = url_redirect;
                 }, 500);
@@ -195,7 +190,7 @@ function changeStatusComment(id) {
                             'Updated!',
                             data.message,
                             'success'
-                        )
+                        );
                         setTimeout(function (){
                             location.reload();
                         }, 500);
@@ -204,11 +199,11 @@ function changeStatusComment(id) {
                             'Update Error!',
                             'Cập nhật không thành công, vui lòng thử lại.',
                             'error'
-                        )
+                        );
                     }
 
                 }
-            })
+            });
         }
-    })
+    });
 }

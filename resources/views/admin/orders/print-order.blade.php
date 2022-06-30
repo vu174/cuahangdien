@@ -30,9 +30,9 @@
                 From
                 <address>
                     <strong>{{$info->name ?? config('app.name')}}</strong><br>
-                    {{$info->address ?? "#"}}<br>
-                    Phone: {{$info->phone ?? "#"}}<br>
-                    Email: {{$info->email ?? "#"}}
+                    {{$info->address ?? ""}}<br>
+                    @if(!empty($info->phone))Phone: {{$info->phone}}<br>@endif
+                    @if(!empty($info->email))Email: {{$info->email}}<br>@endif
                 </address>
             </div>
             <!-- /.col -->

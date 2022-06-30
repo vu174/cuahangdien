@@ -29,7 +29,7 @@
             <p class="login-box-msg">{{__('Đăng nhập để sử dụng hệ thống.')}}</p>
             <form action="" method="post" id="form_login" onsubmit="return false">
                 @csrf
-                <input type="hidden" id="url_previous" value="{{url()->previous()}}">
+                <input type="hidden" id="url_previous" value="{{route('admin.dashboard')}}">
                 <div class="input-group mb-3">
                     <input type="email" class="form-control" placeholder="Email" name="email" value="{{old('email')}}">
                     <div class="input-group-append">
